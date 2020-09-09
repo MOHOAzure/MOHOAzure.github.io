@@ -5,18 +5,57 @@
 - Practiced ML APIs in several scenarios.
 
 ## Practiced ML scenarios
- * [Text detection with Vision API](https://mohoazure.github.io/google%20cloud%20ML/text%20detection)
- * [Text Translation](https://mohoazure.github.io/google%20cloud%20ML/text%20translation)
- * [Analyzing the image's text with the Natural Language API](https://mohoazure.github.io/google%20cloud%20ML/text%20analysis)
-   * analyzing sentiment and syntax, and classifying text into categories.
-   * mid: an ID that maps to an entity in Google's Knowledge Graph.
-   * salience: a [0,1] range indicating how important the entity is to the text as a whole.
- * [Classify a news article]()
-   * find categories for the article
- * [Classifying news (a large text dataset) and storing results in BigQuery]()
-   * require: BigQuery (datatable for storage) & python
-   * SQL knowledge to handle BigQuery for analyzing categorized data
-   * A python script to access Cloud Storage, the Natural Language API, and BigQuery.
+* [Text detection](https://mohoazure.github.io/google%20cloud%20ML/text%20detection)
+* [Text translation](https://mohoazure.github.io/google%20cloud%20ML/text%20translation)
+* [Text analysis](https://mohoazure.github.io/google%20cloud%20ML/text%20analysis)
+  * analyzing sentiment and syntax, and classifying text into categories.
+  * mid: an ID that maps to an entity in Google's Knowledge Graph.
+  * salience: a [0,1] range indicating how important the entity is to the text as a whole.   
+* [Label Detection]()
+  * mid: an ID that maps to an entity in Google's Knowledge Graph.
+  * score: a number from 0 - 1 indicating how confident it is that the description matches what's in the image.
+* [Web Detection]()
+  * fullMatchingImages
+  * partialMatchingImages
+  * pagesWithMatchingImages
+  * visuallySimilarImages
+* [Face Detection]()
+  * position of face (head & skin)
+  * direction & angle of eyes
+  * mood (joy, sorrow, anger, and surprise.)
+  * head wear
+* [Landmark annotation]()
+  * the mid of the landmark
+  * it's name (description) 
+  * a confidence score
+  * The boundingPoly shows the region in the image where the landmark was identified.
+  * The locations key tells us the latitude longitude coordinates of the picture.
+* [Classify a news article]()
+  * find categories for the article
+* [Classifying news (a large text dataset) and storing results in BigQuery]()
+  * require: BigQuery (datatable for storage) & python
+  * SQL knowledge to handle BigQuery for analyzing categorized data
+  * A python script to access Cloud Storage, the Natural Language API, and BigQuery.
+* [Sentiment analysis]()
+  * providing sentiment details on the entire text document
+  * break down sentiment by the entities in the text
+  * score: a number from -1.0 to 1.0 indicating how positive or negative the statement is.
+  * magnitude: a number ranging from 0 to infinity that represents the weight of sentiment expressed in the statement, regardless of being positive or negative.
+* [Syntax analysis]()
+  * Automatic language detection
+  * Part of Speech
+  * DependencyEdge
+* [Awwvision]()
+  * classify (label) images from Reddit's /r/aww subreddit and display the labelled results in a web app.
+  * require: Redis & Kubernetes
+* []()
+
+## Practicing ML scenarios
+* Logo detection
+  * identify common logos and their location in an image.
+* Safe search detection
+  * determine whether or not an image contains explicit content (adult, medical, violent, and spoof content).
+* []()
   
 ## Appendix
 - Basic cloud environment setup

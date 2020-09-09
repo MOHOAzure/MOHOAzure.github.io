@@ -10,7 +10,7 @@
   * A Google Clould account
   * A GCP project (Qwiklabs provisions a new project for a lab instance, it enables most APIs behind the scenarios)
   
-- Enable API for project usage
+- Prepare API for project usage
   * Access to API library
   * Search API by name or usage scenario
   * Enable API and retreive API key
@@ -46,6 +46,10 @@
     ```
 
 - Practiced ML scenarios
-  * [Text detection with Vision API](https://mohoazure.github.io/google%20cloud%20ML/text%20detection.md)  
-  * [Text Translation](https://mohoazure.github.io/google%20cloud%20ML/text%20translation.md)
+  * [Text detection with Vision API](https://mohoazure.github.io/google%20cloud%20ML/text%20detection)
+  * [Text Translation](https://mohoazure.github.io/google%20cloud%20ML/text%20translation)
+  * [Analyzing the image's text with the Natural Language API](https://mohoazure.github.io/google%20cloud%20ML/text%20analysis)
+    * analyzing sentiment and syntax, and classifying text into categories.
+    * mid: an ID that maps to this entity in Google's Knowledge Graph.
+    * salience: a [0,1] range indicating how important the entity is to the text as a whole.
   

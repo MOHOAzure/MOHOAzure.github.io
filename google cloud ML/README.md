@@ -16,15 +16,19 @@
   * Enable API and retreive API key
   
 - Usually used Google Shell commands
-  * *curl* CLI tool: used for API call. 
-  * *export*: set API key, OAuth2 token, or project ID as an environment variable, therefore API call could be concise.
-  * *nano* or *vim*: create and edit a file. For example, editing a request.json passed into API call.
-  * *cat*: view a file, such as request.json and resonse.json
+  * **curl** CLI tool: used for API call. 
+  * **export**: set API key, OAuth2 token, or project ID as an environment variable, therefore API call could be concise.
+  * **nano** or **vim**: create and edit a file. For example, editing a request.json passed into API call.
+  * **cat**: view a file, such as request.json and resonse.json
 
-- Cloud Storage
+- Cloud storage (bucket)
   * Upload an image/file to a cloud storage bucket. 
      ```
-    @ GCP > Navigation menu > Storage > Create bucket > give a **globally unique name** > Create > Upload files (or just Drag the file) > Edit Permission (clicked 3 dots besides the file) > Add a permission item(Entity: **Public**, Name: **allUsers**, Access: **Reader**)  > Save
+    At GCP > Navigation menu > Storage > Create bucket > 
+       give a "globally unique name" > Create > 
+       Upload files (or just Drag the file) > 
+       Edit Permission (clicked 3 dots besides the file) > 
+       Add a permission item(Entity: Public, Name: allUsers, Access: Reader)  > Save
       ```
   * Create a bucket with the Cloud Storage JSON/REST API.
     ```
@@ -42,41 +46,6 @@
     ```
 
 - Practiced ML scenarios
-  * Text detection with Vision API
+  * [Text detection with Vision API](https://mohoazure.github.io/google%20cloud%20ML/text%20detection.md)  
+  * [Text Translation](https://mohoazure.github.io/google%20cloud%20ML/text%20translation.md)
   
-    @ocr-request.json
-  ```  
-  {
-  "requests": [
-      {
-        "image": {
-          "source": {
-              "gcsImageUri": "gs://my-bucket-name/sign.jpg"
-          }
-        },
-        "features": [
-          {
-            "type": "TEXT_DETECTION",
-            "maxResults": 10
-          }
-        ]
-      }
-  ]
-  }
-
-  ```
-  ```
-    curl -s -X POST -H "Content-Type: application/json" --data-binary @ocr-request.json https://vision.googleapis.com/v1/images:annotate?key=${API_KEY}
-  ```
-  
-  * Translation API
-  
-```
-translation-request.json 
-  {
-  "q": "your_text_here",
-  "target": "en"
-}
-
-curl -s -X POST -H "Content-Type: application/json" --data-binary @translation-request.json https://translation.googleapis.com/language/translate/v2?key=${API_KEY} -o translation-response.json
-```

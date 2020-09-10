@@ -1,6 +1,6 @@
 ## Python 
 
-Commonly Seen Questions, including algorithms & Python knowledge, mainly Python 3
+Commonly Seen Questions, including [algorithms](#algorithm) & Python [knowledge](#knowledge), mainly Python 3
 
 ### Algorithm
 <!-- Template
@@ -35,7 +35,7 @@ Commonly Seen Questions, including algorithms & Python knowledge, mainly Python 
   ```
   ![](https://i.imgur.com/OMfIK0J.png)
   
-### Knowlege
+### Knowledge
 - List some standard libraries in python
   - [os](https://docs.python.org/3/library/os.html) : operating system dependent functionalities, such as OS name, file system representation of the path, and shell cmd
   - [sys](https://docs.python.org/3/library/sys.html) : access to variables used or maintained by the interpreter, like argv and command line flags.

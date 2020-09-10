@@ -2,7 +2,7 @@
 
 
 - Input: ocr-request.json
-  ```
+  ```json
   {
     "requests": [
         {

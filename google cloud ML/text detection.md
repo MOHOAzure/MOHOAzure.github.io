@@ -2,23 +2,23 @@
 
 
 - Input: ocr-request.json
-  ```  
+  ```
   {
-  "requests": [
-      {
-        "image": {
-          "source": {
-              "gcsImageUri": "gs://{unique-bucket-name}/{image-name}"
-          }
-        },
-        "features": [
-          {
-            "type": "TEXT_DETECTION",
-            "maxResults": 10
-          }
-        ]
-      }
-  ]
+    "requests": [
+        {
+          "image": {
+            "source": {
+                "gcsImageUri": "gs://{unique-bucket-name}/{image-name}"
+            }
+          },
+          "features": [
+            {
+              "type": "TEXT_DETECTION",
+              "maxResults": 10
+            }
+          ]
+        }
+    ]
   }
 
   ```

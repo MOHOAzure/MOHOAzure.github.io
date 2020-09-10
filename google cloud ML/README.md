@@ -5,9 +5,9 @@
 - Practiced ML APIs in several scenarios.
 
 ## Practiced ML scenarios
-* [Text detection](https://mohoazure.github.io/google%20cloud%20ML/text%20detection)
-* [Text translation](https://mohoazure.github.io/google%20cloud%20ML/text%20translation)
-* [Text analysis](https://mohoazure.github.io/google%20cloud%20ML/text%20analysis)
+* [Text detection](/text%20detection)
+* [Text translation](/text%20translation)
+* [Text analysis](/text%20analysis)
   * analyzing sentiment and syntax, and classifying text into categories.
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
   * salience: a [0,1] range indicating how important the entity is to the text as a whole.   

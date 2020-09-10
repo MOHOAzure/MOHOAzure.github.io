@@ -1,7 +1,7 @@
 ## Google Cloud Machine Learing APIs Experience
 
 - Participated in [Google Cloud Training Machine Learning APIs](https://google.qwiklabs.com/) labs.
-- Learned env setup, Google Shell commands, Google Clould ML Restful API calls...etc.
+- Learned env setup, Google Shell commands, Google Clould ML Restful API calls...etc. Check out Appendix below.
 - Practiced ML APIs in several scenarios.
 
 ## Practiced ML scenarios
@@ -80,7 +80,7 @@
     At GCP > Navigation menu > Storage > Create bucket > 
        give a "globally unique name" > Create > 
        Upload files (or just Drag the file) > 
-       Edit Permission (clicked 3 dots besides the file) > 
+       Edit Permission (clicked 3 dots beside the file) > 
        Add a permission item(Entity: Public, Name: allUsers, Access: Reader)  > Save
       ```
   * Create a bucket with the Cloud Storage JSON/REST API.

@@ -8,5 +8,5 @@ Here is my notes for technical learning and feasibility study.
 
 
 ### Programming Language
-- [Python](https://mohoazure.github.io/programming%20lang/python)
-- [Java](https://mohoazure.github.io/programming%20lang/java)
+- [Python](/programming%20lang/python)
+- [Java](/programming%20lang/java)

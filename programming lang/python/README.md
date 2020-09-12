@@ -1,85 +1,6 @@
 ## Python 
 
-Commonly Seen Questions, including [programming](#programming) & Python [knowledge](#knowledge), mainly Python 3
-
-### Programming
-<!-- Template
-- 
-  ```python
-  ```
-  ![]()
-  
-  - Question
-  ```python
-  ```
-  ![ResultPic]()
--->
-
-- Remove repeated values in a list
-  ```python
-  list=[11,11,12,13,15,13]
-  dic=set(list)
-  new_list=[x for x in dic]
-  ```
-  ![](https://i.imgur.com/5Eokj2w.png)
-  
-- Delete a key in a dictionary
-  ```python
-  dic={"key1":"v1", "key2":"v2"}
-  del dic["key1"]  
-  ```
-  ![](https://i.imgur.com/5Mpw94x.png)
-  
-- Merge two dictionaries
-  ```python
-  dic1={"k1":"v1"}
-  dic2={"k2":"v2"}
-  dic1.update(dic2)
-  ```
-  ![](https://i.imgur.com/KrmA3UW.png)
-  
-- Sum up 1 to 100
-  ```python
-  sum(range(1,101))
-  ```
-  ![](https://i.imgur.com/myZWIz1.png)
-  
-- Modify a global variable in a function
-  ```python
-  a=5
-
-  def fn():
-      global a
-      a=0
-
-  print("Before", a)
-  fn()
-  print("After", a)
-  ```
-  ![](https://i.imgur.com/OMfIK0J.png)
-
-
-- Given a list of numbers, return their square numbers which are largers than a specified value.
-  ```python
-  def fn_sqr(x):
-    return x**2
-
-  def fn_ans(list, threshold):
-    return [i for i in list if i>threshold]
-
-  list=[1,2,3,4,5]
-  threshold=10
-  res=map(fn_sqr, list)
-  res=fn_ans(res, threshold)
-  ```
-  ![](https://i.imgur.com/KyD9X17.png)
-  
-
-- 
-  ```python
-  ```
-  ![]()
-
+Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming](#programming), mainly Python 3
 
 ### Knowledge
 - List some standard libraries in python
@@ -132,6 +53,167 @@ Commonly Seen Questions, including [programming](#programming) & Python [knowled
   ![](https://i.imgur.com/bJ5Cmro.png)
   
 - Difference in `range(100)` between python2 and python3
-  * In python2, `range(100)` returns a list; in python3, it returns a iterator in order to reduce memory consumption.
+  - In python2, `range(100)` returns a list
+  - In python3, it returns a iterator in order to reduce memory consumption.
 
 - Difference between \_\_new\_\_ and \_\_init\_\_
+  - \_\_new\_\_ : the first step of instance creation. 
+    \_\_new\_\_ is called first with a parameter `cls` (class), and is responsible for **returning** a new instance of a class.
+    In general, you shouldn't need to override \_\_new\_\_ unless you're subclassing an immutable type like str, int, unicode or tuple. 
+  - \_\_init\_\_ : initialization of a new instance after it's been created.
+    \_\_init\_\_ is called with a parameter `self`, which is and instance return by \_\_new\_\_.
+    \_\_init\_\_ dosen't return value, it initiate fileds of an instance.
+  ```python
+  class Car(object):
+      def __init__(self):
+        print("This is __init__", self)
+
+      def __new__(cls):
+        print("This is __new__", object.__new__(cls))
+        print("cls ID:", id(cls))
+        return object.__new__(cls)
+
+  Car()
+  print("class ID of Car:", id(Car))
+  ```
+    ![](https://i.imgur.com/Flcw5gi.png)
+
+- 2 ways of file handling, using with and not using it
+  - Use `with`, which deals with exception & file close internally
+  ```python
+    with open('file_path', 'w') as file:
+      file.write('using with')
+  ```
+  
+  - Not use `with`
+  ```python
+    file = open('file_path', 'w')
+    try:
+      file.wirte('not using with')
+    except:
+      pass
+    finally:
+      file.close()
+  ```
+
+- Explain python `assert`
+  - Test a condition in program returns `True`, otherwise the program raises an `AssertionError` 
+  ```python
+  val=0
+  assert val==0, "OK, Value is 0"
+  assert val!=0, "Value should be 0"
+  ```
+  ![](https://i.imgur.com/HvxpcCe.png)
+  
+- 
+
+- Elaspse time measurement
+  ```python
+  from timeit import default_timer as timer
+  start = timer()
+
+  print("Hi! Good day!")
+
+  end = timer()
+  print("elaspse time", end - start)
+  ```
+  ![](https://i.imgur.com/Is2TGL3.png)
+
+### Programming
+  
+- Remove repeated values in a list
+  ```python
+  list=[11,11,12,13,15,13]
+  dic=set(list)
+  new_list=[x for x in dic]
+  ```
+  ![](https://i.imgur.com/5Eokj2w.png)
+  
+- Delete a key in a dictionary
+  ```python
+  dic={"key1":"v1", "key2":"v2"}
+  del dic["key1"]  
+  ```
+  ![](https://i.imgur.com/5Mpw94x.png)
+  
+- Merge two dictionaries
+  ```python
+  dic1={"k1":"v1"}
+  dic2={"k2":"v2"}
+  dic1.update(dic2)
+  ```
+  ![](https://i.imgur.com/KrmA3UW.png)
+  
+- Sum up 1 to 100
+  ```python
+  sum(range(1,101))
+  ```
+  ![](https://i.imgur.com/myZWIz1.png)
+  
+- Modify a global variable in a function
+  ```python
+  a=5
+
+  def fn():
+      global a
+      a=0
+
+  print("Before", a)
+  fn()
+  print("After", a)
+  ```
+  ![](https://i.imgur.com/OMfIK0J.png)
+
+
+- Given a list of numbers, return their square numbers which are larger than a threshold (specified value).
+  ```python
+  def fn_sqr(x):
+    return x**2
+
+  def fn_ans(list, threshold):
+    return [i for i in list if i>threshold]
+
+  list=[1,2,3,4,5]
+  threshold=10
+  res=map(fn_sqr, list)
+  res=fn_ans(res, threshold)
+  ```
+  ![](https://i.imgur.com/KyD9X17.png)
+  
+
+- Generate random numbers: one integer and 3 decimal numbers
+  ```python
+  import random
+
+  res_int=random.randint(0,10)
+  res_decimal=random.random()
+
+  print("Random int", res_int)
+  print("Random decimal", res_decimal)
+  ```
+  ![](https://i.imgur.com/GBBWUN0.png)
+
+- Find *Person Name* in `<div class="person_nam">Person Name</div>` where class name is uncertain
+  ```python
+  import re
+
+  str='<div class="person_nam">Person Name</div>'
+  res=re.findall(r'<div class=".*">(.*?)</div>',str)
+  # ".*" : deal wit verious class name
+  # (.*?): select text
+
+  print(res)
+  ```
+  ![](https://i.imgur.com/HGGIPNM.png)
+
+<!-- Template
+- 
+  ```python
+  ```
+  ![]()
+  
+  - Question
+  ```python
+  ```
+  ![ResultPic]()
+-->

@@ -213,6 +213,17 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/HGGIPNM.png)
 
+- Given a string, remvoe duplicated character and sort the string ascendingly.
+  ```python
+  s="ajldjlajfdljfddd"
+  s=set(s)
+  s=list(s)
+  s.sort(reverse=False)
+  res="".join(s)
+  print(res)
+  ```
+  ![](https://i.imgur.com/kXGliav.png)
+  
 <!-- Template
 - 
   ```python

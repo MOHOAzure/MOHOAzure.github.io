@@ -251,6 +251,35 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/mM6BN96.png)
   
+- Given a str='not 404 found 成果 666 大好', try to remove the english & number parts and then output '成果' & '大好'
+  ```python
+  import re
+  str='not 404 found 成果 666 大好'
+  # preprocss str
+  list=str.split(' ')
+
+  res=re.findall(r'\d+|[a-zA-Z]+',str)
+  # \d+ : find numbers (as same as [0-9]+)
+  # [a-zA-Z]+: find alphabets
+
+  # remove numbers & alphabets
+  for i in res:
+      if i in list:
+          list.remove(i)
+
+  print(list)
+  ```
+  ![](https://i.imgur.com/3UYfEDY.png)
+  
+- Given a list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], try to find odd numbers with `filter` and group them in a list
+  ```python
+  list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  newlist=filter(lambda i:i%2==1, list)
+  newlist=[i for i in newlist]
+  print(newlist)
+  ```
+  ![](https://i.imgur.com/q7qnJry.png)
+  
 <!-- Template
 - 
   ```python

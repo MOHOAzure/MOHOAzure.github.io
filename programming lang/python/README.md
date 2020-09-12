@@ -112,7 +112,12 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/HvxpcCe.png)
   
-- 
+- In regular expression, explain difference between (.\*) and (.\*?)
+  - (.\*) : it's greedy, matching as **much** as it can.
+  - (.\*?) : it's non-greedy, matching as **little** as it can.
+  ```python
+  ```
+  ![](https://i.imgur.com/WM42jxa.png)
 
 - Elaspse time measurement
   ```python
@@ -280,6 +285,12 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/q7qnJry.png)
   
+- Retrieve current timestamp
+  ```python
+  import datetime
+  log_time=str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
+  print(log_time)
+  ```
 <!-- Template
 - 
   ```python

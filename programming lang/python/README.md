@@ -224,6 +224,33 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/kXGliav.png)
   
+- Multiply two numbers with `lambda`
+  ```python
+  sum=lambda a,b:a*b
+  print(sum(9,6))
+  ```
+  ![](https://i.imgur.com/mkYFcmK.png)
+  
+- Sort a dictionary by key names
+  ```python
+  dic={"Name":"Ange","Age":27, "Country":"JP"}
+  list=sorted(dic.items(), key=lambda i:i[0])
+  dic=dict(list)
+  print(dic)
+  ```
+  ![](https://i.imgur.com/vmNRg00.png)
+  
+- Count the number of each character in a given string, `s='fjljgpmupwer|ksdf#$kl*@'`
+  ```python
+  from collections import Counter
+  s='fjljgpmupwer|ksdf#$kl*@'
+  res=Counter(s)
+  # Access context of Count
+  for i in res.keys():
+      print("%s:%s" % (i, res[i]))
+  ```
+  ![](https://i.imgur.com/mM6BN96.png)
+  
 <!-- Template
 - 
   ```python

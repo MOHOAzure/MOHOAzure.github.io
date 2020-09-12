@@ -23,6 +23,13 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   - dict
   - bytes
   - Details: <https://docs.python.org/3/library/stdtypes.htm>
+
+- Mutable v.s. Immutable
+  * Immutable
+      * int, float, str, bool, tuple, range, bytes, frozenset
+      * Change to the value involves creation of a new object with the value, refer the original variable to the new created object. If the original object is no longer refered (reference counting=0), then it is garbage collected.
+  * Mutable
+      * list, dict, set, custom class (general case)
   
 - Python GIL
   - GIL (Global Interpreter Lock) is a mutex lock, which allows only one **thread** to control of the python interpreter.

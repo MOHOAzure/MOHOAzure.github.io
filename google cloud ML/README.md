@@ -58,6 +58,8 @@
     * run training job on a single worker instance in the cloud, then deploy the trained model to support prediction.
   * request an online prediction and see [the response](https://i.imgur.com/5EVwTp7.png).
     * since the model's last layer uses a sigmoid function for its activation, outputs between 0 and 0.5 represent negative predictions ("<=50K") and outputs between 0.5 and 1 represent positive ones (">50K")
+ * Dataprep
+   * with Trifacta
 
 ## Practicing ML scenarios
 * Logo detection

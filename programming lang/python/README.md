@@ -115,9 +115,40 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 - In regular expression, explain difference between (.\*) and (.\*?)
   - (.\*) : it's greedy, matching as **much** as it can.
   - (.\*?) : it's non-greedy, matching as **little** as it can.
-  ```python
+  ```python  
+  import re
+  str="<a> foo </a><a> bar </a>"
+  greedy=re.findall(r'<a>(.*)</a>',str)
+  nongreedy=re.findall(r'<a>(.*?)</a>',str)
+  print("(.*) is greedy",greedy)
+  print("(.*?) is non-greedy",nongreedy)
   ```
   ![](https://i.imgur.com/WM42jxa.png)
+  
+- Give examples to explain ```try except else finally```
+  - ```finally``` is executed regardless of whether the statements in the try block fail or succeed
+  - ```else``` is executed only if the statements in the try block don't raise an exception.
+  ```python  
+  try:
+      print("HI")
+  except IOError as errorMsg:
+      print('Err', errorMsg)
+  else:
+      print("No error, come to else statement")
+  finally:
+      print("Next example")
+
+  try:
+      print("try to open a non-existing file")
+      foo = open("foo.txt")
+  except IOError:
+      print("error")
+  else:
+      print(foo.read())
+  finally:
+      print("finished")
+  ```
+  ![](https://i.imgur.com/LJqZEra.png)
 
 - Elaspse time measurement
   ```python
@@ -291,6 +322,86 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   log_time=str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
   print(log_time)
   ```
+- Parse [[1,2],[3,4],[5,6]] to [1,2,3,4,5,6]
+  ```python
+  list=[[1,2],[3,4],[5,6]]
+  new_list = [j for i in list for j in i]
+  print(new_list)
+  ```
+  ![](https://i.imgur.com/M85qR6u.png)
+  
+- Swap two values
+  ```python  
+  a, b = 1,0
+  a, b = b,a
+  ```
+  
+- Given a string, replace its numerical numbers with a white space 
+  ```python
+  import re
+  str="Wow 999 Nice"
+  res=re.sub(r'\d+',' ', str)
+  print(res)
+  ```
+  ![](https://i.imgur.com/OR34t4d.png)
+  
+- Demo ```zip```
+  ```python  
+  list_a=[1,2]
+  list_b=[3,4]
+  res=[tuple for tuple in zip(list_a, list_b)]
+  print(res)
+
+  tuple_a=(1,2)
+  tuple_b=(3,4)
+  res=[tuple for tuple in zip(tuple_a, tuple_b)]
+  print(res)
+
+  str_a="HI"
+  str_b="GOOD"
+  res=[tuple for tuple in zip(str_a, str_b)]
+  ```
+  ![](https://i.imgur.com/n2tp75u.png)
+  
+- Sort a list ascendingly but without ```sort``` function
+  - find out the min number, and reverse it in a new space
+  ```python  
+  list=[2,3,-5,14,9,0]
+  new_list=[]
+
+  def my_sort(list):
+      n=min(list)
+      new_list.append(n)
+      list.remove(n)
+      if len(list)>0:
+          my_sort(list)
+
+  my_sort(list)
+  print(new_list)
+  ```
+  ![](https://i.imgur.com/oF63miO.png)
+  
+- Implement a singleton pattern
+  ```python
+  class Singleton(object):
+      __instance=None
+
+      def __new__(cls,name,age):
+          if not cls.__instance:
+              cls.__instance=object.__new__(cls)
+          return cls.__instance
+
+  ins_dog=Singleton("doge",1)
+  ins_cat=Singleton("kitty",2)
+
+  print(id(ins_dog))
+  print(id(ins_cat))
+
+  ins_dog.name='wang wang'
+  print("cat name", ins_cat.name)
+  ```
+  ![](https://i.imgur.com/2cqABBz.png)
+
 <!-- Template
 - 
   ```python

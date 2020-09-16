@@ -17,4 +17,3 @@ Here is my notes for technical learning and feasibility study.
 
 ### Programming Language
 - [Python](/programming%20lang/python)
-- [Java](/programming%20lang/java)

@@ -13,13 +13,18 @@
   * salience: a [0,1] range indicating how important the entity is to the text as a whole.   
 * [Label Detection](/label%20detection)
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
+  * description: the name of the item.
   * score: a number from 0 - 1 indicating how confident it is that the description matches what's in the image.
 * [Web Detection]()
-  * fullMatchingImages
-  * partialMatchingImages
-  * pagesWithMatchingImages
-  * visuallySimilarImages
-* [Face Detection]()
+  * entityId: mid
+  * description: the name of the item.
+  * score: a number from 0 - 1 indicating how confident it is that the description matches what's in the image.
+  * The following 4 responsed objects are urls point to websites containing images as names suggest
+    * fullMatchingImages
+    * partialMatchingImages
+    * pagesWithMatchingImages
+    * visuallySimilarImages
+* [Face Detection](/face%20detection)
   * position of face (head & skin)
   * direction & angle of eyes
   * mood (joy, sorrow, anger, and surprise.)
@@ -29,7 +34,7 @@
   * it's name (description) 
   * a confidence score
   * The boundingPoly shows the region in the image where the landmark was identified.
-  * The locations key tells us the latitude longitude coordinates of the picture.
+  * The locations key tells the latitude longitude coordinates of the picture.
 * [Classify a news article]()
   * find categories for the article
 * [Classifying news (a large text dataset) and storing results in BigQuery]()
@@ -48,6 +53,9 @@
 * [Awwvision]()
   * classify (label) images from Reddit's /r/aww subreddit and display the labelled results in a web app.
   * require: Redis & Kubernetes
+* [Classify Images of Clouds in the Cloud with AutoML Vision]()
+  * AutoML Vision helps developers with limited ML expertise train high quality image recognition models.
+  * Once you upload images to the AutoML UI, you can train a model that will be immediately available on Google Cloud for generating predictions via an easy to use REST API.
 * [Predict income category of a person]()
   * using the [United States Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Census+Income)
   * tensorFlow 2.3 model training and validation (locally). 3 python programs are involved for training.
@@ -84,6 +92,7 @@
   * **export**: set API key, OAuth2 token, or project ID as an environment variable, therefore API call could be concise.
   * **nano**, **vim**, **emacs**: create and edit a file. For example, editing a request.json passed into API call.
   * **cat**: view a file, such as request.json and resonse.json
+  * **gsutil cp [OPTION]... src_url dst_url**: file copy/mv, e.g., gsutil cp \*.txt gs://my-bucket
 
 - Cloud storage (bucket)
   * Upload an image/file to a cloud storage bucket. 
@@ -107,5 +116,5 @@
       -H "Authorization: Bearer $OAUTH2_TOKEN" \
       -H "Content-Type: image/png" \
       "https://www.googleapis.com/upload/storage/v1/b/$BUCKET_NAME/o?uploadType=media&name=$IMAGE_NAME"
-    ```
+    ```    
 

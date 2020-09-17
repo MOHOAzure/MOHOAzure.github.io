@@ -11,7 +11,7 @@
   * analyzing sentiment and syntax, and classifying text into categories.
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
   * salience: a [0,1] range indicating how important the entity is to the text as a whole.   
-* [Label Detection]()
+* [Label Detection](/label%20detection)
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
   * score: a number from 0 - 1 indicating how confident it is that the description matches what's in the image.
 * [Web Detection]()

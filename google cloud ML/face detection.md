@@ -1,6 +1,10 @@
 # Face detection with Vision API
 
+The face detection method returns data on faces found in an image, including the emotions of the faces and their location in the image.
   * position of face (head & skin)
+    * boundingPoly gives you the x,y coordinates around the face in the image.
+    * fdBoundingPoly is a smaller box than boundingPoly, focusing on the skin part of the face.
+    * landmarks is an array of objects for each facial feature, some you may not have even known about. This tells us the type of landmark, along with the 3D position of that feature (x,y,z coordinates) where the z coordinate is the depth. The remaining values gives details on the face, including the likelihood of joy, sorrow, anger, and surprise.
   * direction & angle of eyes
   * mood (joy, sorrow, anger, and surprise.)
   * head wear

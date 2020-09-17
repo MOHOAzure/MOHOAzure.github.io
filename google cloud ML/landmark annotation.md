@@ -1,5 +1,14 @@
 # Landmark annotation
 
+Identify common (and obscure) landmarks
+
+Return:
+  * the mid of the landmark
+  * it's name (description) 
+  * a confidence score
+  * The boundingPoly shows the region in the image where the landmark was identified.
+  * The locations key tells the latitude longitude coordinates of the picture.
+  
 ## Image
 https://cdn.qwiklabs.com/%2Fv47QS0KOC28%2F03bZx0R%2FO0iLLvtYQUOZyvnjIfz%2BIE%3D
 

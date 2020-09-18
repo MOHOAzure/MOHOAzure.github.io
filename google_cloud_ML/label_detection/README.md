@@ -4,7 +4,7 @@
 ![](https://i.imgur.com/Tmn3eul.jpg)
 
 ## input: request.json
-```
+```json
 {
   "requests": [
     {
@@ -28,7 +28,7 @@ There are many types of ```image``` detection, label, face, landmark, text...etc
 ![](https://i.imgur.com/ww4GYf7.png)
 
 ## output: response.json
-```
+```json
 {
   "responses": [
     {

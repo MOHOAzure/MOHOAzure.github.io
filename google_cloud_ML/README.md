@@ -5,13 +5,13 @@
 - Practiced ML APIs in several scenarios.
 
 ## Practiced ML scenarios
-* [Text detection](/text_detection)
-* [Text translation](/text_translation)
-* [Text analysis](/text_analysis)
+* [Text detection](text_detection)
+* [Text translation](text_translation)
+* [Text analysis](text_analysis)
   * analyzing sentiment and syntax, and classifying text into categories.
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
   * salience: a [0,1] range indicating how important the entity is to the text as a whole.   
-* [Label Detection](/label_detection)
+* [Label Detection](label_detection)
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
   * description: the name of the item.
   * score: a number from 0 - 1 indicating how confident it is that the description matches what's in the image.
@@ -24,12 +24,12 @@
     * partialMatchingImages
     * pagesWithMatchingImages
     * visuallySimilarImages
-* [Face Detection](/face_detection)
+* [Face Detection](face_detection)
   * position of face (head & skin)
   * direction & angle of eyes
   * mood (joy, sorrow, anger, and surprise.)
   * head wear
-* [Landmark annotation](/landmark_annotation)
+* [Landmark annotation](landmark_annotation)
   * the mid of the landmark
   * it's name (description) 
   * a confidence score

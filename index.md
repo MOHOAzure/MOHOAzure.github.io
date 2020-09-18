@@ -4,7 +4,7 @@ Here is my notes for technical learning and feasibility study.
 
 
 ### Google API
-- [Google Cloud Machine Learning API](/google%20cloud%20ML/)
+- [Google Cloud Machine Learning API](/google_cloud_ML/)
 
 ### Machine Learning Materials
 - [Orion Academy](https://www.youtube.com/channel/UCnyibKMqygjoeBNl3l_popQ/search?query=Machine+Learning)
@@ -16,4 +16,4 @@ Here is my notes for technical learning and feasibility study.
 - [第 11 屆 iT 邦幫忙鐵人賽 online articles](https://ithelp.ithome.com.tw/users/20119971/ironman/2254?page=1)
 
 ### Programming Language
-- [Python](/programming%20lang/python)
+- [Python](/programming_lang/python)

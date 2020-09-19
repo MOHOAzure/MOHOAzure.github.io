@@ -22,6 +22,9 @@ curl "https://language.googleapis.com/v1/documents:analyzeSentiment?key=${API_KE
 ### Output
 * sentiment for the document as a whole, and 
 * sentiment broken down by sentence.
+* score: a number from -1.0 to 1.0 indicating how positive or negative the statement is.
+* magnitude: a number ranging from 0 to infinity that represents the weight of sentiment expressed in the statement, regardless of being positive or negative.
+
 ```json
 {
   "documentSentiment": {

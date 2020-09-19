@@ -33,7 +33,7 @@
 * [Classify Images of Clouds in the Cloud with AutoML Vision](image_classification)
   * AutoML Vision helps developers with limited ML expertise train high quality image recognition models.
   * Once you upload images to the AutoML UI, you can train a model that will be immediately available on Google Cloud for generating predictions via an easy to use REST API.  
-* [Awwvision]()
+* [Awwvision](awwvision)
   * classify (label) images from Reddit's /r/aww subreddit and display the labelled results in a web app.
   * require: Redis & Kubernetes
   

@@ -51,7 +51,7 @@
   * require: BigQuery (datatable for storage) & python
   * SQL knowledge to handle BigQuery for analyzing categorized data
   * A python script to access Cloud Storage, the Natural Language API, and BigQuery.
-* [Entity Recognition]()
+* [Entity Recognition](entity_recognition)
   * Identify entities and label by types such as person, organization, location, events, products and media
 * [Sentiment analysis]()
   * providing sentiment details on the entire text document

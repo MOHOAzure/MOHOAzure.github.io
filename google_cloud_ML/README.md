@@ -5,17 +5,12 @@
 - Practiced ML APIs in several scenarios.
 
 ## Practiced ML scenarios
-* [Text detection](text_detection)
-* [Text translation](text_translation)
-* [Text analysis](text_analysis)
-  * analyzing sentiment and syntax, and classifying text into categories.
-  * mid: an ID that maps to an entity in Google's Knowledge Graph.
-  * salience: a [0,1] range indicating how important the entity is to the text as a whole.   
+### Image
 * [Label Detection](label_detection)
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
   * description: the name of the item.
   * score: a number from 0 - 1 indicating how confident it is that the description matches what's in the image.
-* [Web Detection]()
+* Web Detection
   * entityId: mid
   * description: the name of the item.
   * score: a number from 0 - 1 indicating how confident it is that the description matches what's in the image.
@@ -34,7 +29,21 @@
   * it's name (description) 
   * a confidence score
   * The boundingPoly shows the region in the image where the landmark was identified.
-  * The locations key tells the latitude longitude coordinates of the picture.
+  * The locations key tells the latitude longitude coordinates of the picture.  
+* [Classify Images of Clouds in the Cloud with AutoML Vision](image_classification)
+  * AutoML Vision helps developers with limited ML expertise train high quality image recognition models.
+  * Once you upload images to the AutoML UI, you can train a model that will be immediately available on Google Cloud for generating predictions via an easy to use REST API.  
+* [Awwvision]()
+  * classify (label) images from Reddit's /r/aww subreddit and display the labelled results in a web app.
+  * require: Redis & Kubernetes
+  
+### Text
+* [Text detection](text_detection)
+* [Text translation](text_translation)
+* [Text analysis](text_analysis)
+  * analyzing sentiment and syntax, and classifying text into categories.
+  * mid: an ID that maps to an entity in Google's Knowledge Graph.
+  * salience: a [0,1] range indicating how important the entity is to the text as a whole.   
 * [Classify a news article]()
   * find categories for the article
 * [Classifying news (a large text dataset) and storing results in BigQuery]()
@@ -50,12 +59,10 @@
   * Automatic language detection
   * Part of Speech
   * DependencyEdge
-* [Awwvision]()
-  * classify (label) images from Reddit's /r/aww subreddit and display the labelled results in a web app.
-  * require: Redis & Kubernetes
-* [Classify Images of Clouds in the Cloud with AutoML Vision]()
-  * AutoML Vision helps developers with limited ML expertise train high quality image recognition models.
-  * Once you upload images to the AutoML UI, you can train a model that will be immediately available on Google Cloud for generating predictions via an easy to use REST API.
+  
+### Others
+ * Dataprep
+   * with Trifacta
 * [Predict income category of a person]()
   * using the [United States Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Census+Income)
   * tensorFlow 2.3 model training and validation (locally). 3 python programs are involved for training.
@@ -66,8 +73,6 @@
     * run training job on a single worker instance in the cloud, then deploy the trained model to support prediction.
   * request an online prediction and see [the response](https://i.imgur.com/5EVwTp7.png).
     * since the model's last layer uses a sigmoid function for its activation, outputs between 0 and 0.5 represent negative predictions ("<=50K") and outputs between 0.5 and 1 represent positive ones (">50K")
- * Dataprep
-   * with Trifacta
 
 ## Practicing ML scenarios
 * Logo detection

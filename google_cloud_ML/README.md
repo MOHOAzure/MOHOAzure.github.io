@@ -37,7 +37,8 @@
   * classify (label) images from Reddit's /r/aww subreddit and display the labelled results in a web app.
   * require: Redis & Kubernetes
   
-### Text
+### Nature language (Text & Speech)
+* [Multilingual speech to text](speech_to_text)
 * [Text detection](text_detection)
 * [Text translation](text_translation)
 * [Text analysis](text_analysis)
@@ -50,14 +51,16 @@
   * require: BigQuery (datatable for storage) & python
   * SQL knowledge to handle BigQuery for analyzing categorized data
   * A python script to access Cloud Storage, the Natural Language API, and BigQuery.
+* [Entity Recognition]()
+  * Identify entities and label by types such as person, organization, location, events, products and media
 * [Sentiment analysis]()
   * providing sentiment details on the entire text document
   * break down sentiment by the entities in the text
   * score: a number from -1.0 to 1.0 indicating how positive or negative the statement is.
   * magnitude: a number ranging from 0 to infinity that represents the weight of sentiment expressed in the statement, regardless of being positive or negative.
 * [Syntax analysis]()
+  * Extract tokens and sentences, identify parts of speech (PoS) and create dependency parse trees for each sentence.
   * Automatic language detection
-  * Part of Speech
   * DependencyEdge
   
 ### Others

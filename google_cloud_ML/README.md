@@ -2,7 +2,7 @@
 
 - Participated in [Google Cloud Training Machine Learning APIs](https://google.qwiklabs.com/) labs.
 - Learned env setup, Google Shell commands, Google Clould ML Restful API calls...etc. Check out [Appendix](#appendix) below.
-- Practiced ML APIs in several scenarios.
+- Practiced ML APIs in several scenarios, such [Image](#image), [Speech, and Text](#nature-language)...[etc](#others).
 
 ## Practiced ML scenarios
 ### Image
@@ -37,7 +37,7 @@
   * classify (label) images from Reddit's /r/aww subreddit and display the labelled results in a web app.
   * require: Redis & Kubernetes
   
-### Nature language (Text & Speech)
+### Nature language
 * [Multilingual speech to text](speech_to_text)
 * [Text detection](text_detection)
 * [Text translation](text_translation)
@@ -53,29 +53,16 @@
   * A python script to access Cloud Storage, the Natural Language API, and BigQuery.
 * [Entity Recognition](entity_recognition)
   * Identify entities and label by types such as person, organization, location, events, products and media
-* [Sentiment analysis]()
-  * providing sentiment details on the entire text document
-  * break down sentiment by the entities in the text
-  * score: a number from -1.0 to 1.0 indicating how positive or negative the statement is.
-  * magnitude: a number ranging from 0 to infinity that represents the weight of sentiment expressed in the statement, regardless of being positive or negative.
-* [Syntax analysis]()
+* [Sentiment analysis](sentiment_analysis)
+  * Provide sentiment details on the entire text document or on each entity
+* [Syntax analysis](syntax_analysis)
   * Extract tokens and sentences, identify parts of speech (PoS) and create dependency parse trees for each sentence.
   * Automatic language detection
-  * DependencyEdge
   
 ### Others
  * Dataprep
    * with Trifacta
-* [Predict income category of a person]()
-  * using the [United States Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/Census+Income)
-  * tensorFlow 2.3 model training and validation (locally). 3 python programs are involved for training.
-    * util.py: contain utility methods for cleaning and preprocessing the data, as well as performing any feature engineering needed by transforming and normalizing the data.
-    * model.py: define the input function and the model architecture.
-    * task.py: train on data loaded and preprocessed in util.py
-  * train & deploy a tensorflow model to AI Platfom
-    * run training job on a single worker instance in the cloud, then deploy the trained model to support prediction.
-  * request an online prediction and see [the response](https://i.imgur.com/5EVwTp7.png).
-    * since the model's last layer uses a sigmoid function for its activation, outputs between 0 and 0.5 represent negative predictions ("<=50K") and outputs between 0.5 and 1 represent positive ones (">50K")
+* [Predict income category of a person](predict_income)
 
 ## Practicing ML scenarios
 * Logo detection

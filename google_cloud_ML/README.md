@@ -41,13 +41,14 @@
 * [Multilingual speech to text](speech_to_text)
 * [Text detection](text_detection)
 * [Text translation](text_translation)
-* [Text analysis](text_analysis)
+* Text analysis
   * analyzing sentiment and syntax, and classifying text into categories.
   * mid: an ID that maps to an entity in Google's Knowledge Graph.
   * salience: a [0,1] range indicating how important the entity is to the text as a whole.   
-* [Classify a news article]()
+* [Classify a news article](classify_a_ariticle)
   * find categories for the article
-* [Classifying news (a large text dataset) and storing results in BigQuery]()
+* [Classifying news and storing results in BigQuery](classify_news)
+  * news: a large text dataset
   * require: BigQuery (datatable for storage) & python
   * SQL knowledge to handle BigQuery for analyzing categorized data
   * A python script to access Cloud Storage, the Natural Language API, and BigQuery.

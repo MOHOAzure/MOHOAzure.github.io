@@ -1,5 +1,9 @@
 # Classify a news article 
-  * find categories for the article with
+  * find categories for the article with Language API
+  
+### Environment
+GCP > Compute Engine> VM instances
+
 ### Input
 * request.json
 ```json

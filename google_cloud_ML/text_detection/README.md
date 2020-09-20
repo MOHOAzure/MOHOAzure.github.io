@@ -1,7 +1,7 @@
 ## Text detection with Vision API
 
 
-- Input: 
+### Input: 
 * Image
 
 ![](https://i.imgur.com/UMCdqTY.png)

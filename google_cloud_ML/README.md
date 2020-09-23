@@ -88,7 +88,9 @@
   * **export**: set API key, OAuth2 token, or project ID as an environment variable, therefore API call could be concise.
   * **nano**, **vim**, **emacs**: create and edit a file. For example, editing a request.json passed into API call.
   * **cat**: view a file, such as request.json and resonse.json
-  * **gsutil cp [OPTION]... src_url dst_url**: file copy/mv, e.g., gsutil cp \*.txt gs://my-bucket
+  * **gsutil cp [OPTION]... src_url dst_url**
+    * upload a file to a bucket : gsutil cp \*.txt gs://my-bucket
+    * download a file from a bucket: gsutil cp gs://my-bucket/*.txt .
 
 - Cloud storage (bucket)
   * Upload an image/file to a cloud storage bucket. 

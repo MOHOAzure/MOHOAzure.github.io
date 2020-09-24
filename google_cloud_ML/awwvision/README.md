@@ -3,6 +3,7 @@ uses Kubernetes and Cloud Vision API to demonstrate how to use the Vision API to
 
 ## Create a Kubernetes Engine cluster
 * create a cluster in the us-central1-a zone, and start up the cluster
+
 ```
 gcloud config set compute/zone us-central1-a
 
@@ -12,11 +13,13 @@ gcloud container clusters create awwvision \
 ```
 
 * use the container's credentials
+
 ```
 gcloud container clusters get-credentials awwvision
 ```
 
 * verify that everything is working
+
 ```
 kubectl cluster-info
 
@@ -28,6 +31,7 @@ Metrics-server is running at https://35.192.118.247/api/v1/namespaces/kube-syste
 ```
 
 ## Create a virtual environment, and then active it
+
 ```
 virtualenv -p python3 venv
 
@@ -36,6 +40,7 @@ source venv/bin/activate
 
 ## Add sample data to awwvision project, and then build and deploy everything
 As part of the process, Docker images will be built and uploaded to the Google Container Registry private container registry. In addition, yaml files will be generated from templates, filled in with information specific to your project, and used to deploy the redis, webapp, and worker Kubernetes resources for the lab.
+
 ```
 git clone https://github.com/GoogleCloudPlatform/cloud-vision
 
@@ -46,6 +51,7 @@ make all
 
 ## Check the Kubernetes resources on the cluster
 * list the [pods](https://kubernetes.io/docs/concepts/workloads/pods/pod)
+
 ```
 kubectl get pods
 
@@ -58,6 +64,7 @@ redis-master-7c57dbd-vrk46          1/1     Running   0          3m40s
 ```
 
 * list the [deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment)
+
 ```
 kubectl get deployments -o wide
 
@@ -68,6 +75,7 @@ redis-master       1/1     1            1           4m39s   redis-master       r
 ```
 
 * get the external IP address of the webapp [service](https://kubernetes.io/docs/concepts/services-networking/service)
+
 ```
 kubectl get svc awwvision-webapp
 
@@ -77,5 +85,7 @@ awwvision-webapp   LoadBalancer   10.3.253.157   34.123.144.20   80:31293/TCP   
 
 ## Visit the new created web app and start its crawler
 * Visit the web app by its IP retrieved by previous step
-![](https://i.imgur.com/bDUBCXE.png)
-![](https://i.imgur.com/uTE26Mk.png)
+
+    ![](https://i.imgur.com/bDUBCXE.png)
+
+    ![](https://i.imgur.com/uTE26Mk.png)

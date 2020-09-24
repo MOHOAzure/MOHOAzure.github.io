@@ -7,6 +7,7 @@
 ![](https://i.imgur.com/UMCdqTY.png)
 
 * ocr-request.json
+
 ```json
 {
   "requests": [
@@ -29,6 +30,7 @@
 ```
   
 ### API call
+
 ```
   curl -s -X POST 
         -H "Content-Type: application/json" 
@@ -39,6 +41,7 @@
 
 ### Output
 * orc-response.json
+
 ```json
 {
   "responses": [

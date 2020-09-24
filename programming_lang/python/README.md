@@ -150,6 +150,45 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/LJqZEra.png)
 
+- copy v.s. deepcopy
+  - If the "copied" variable is **immutable**, `copy` and `deepcopy` both act lilke `=`
+    ```python  
+    import copy
+    var="HA"
+    print(id(var))
+    var_copy = copy.copy(var)
+    print(id(var_copy))
+    var_deepcopy = copy.deepcopy(var)
+    print(id(var_deepcopy))
+    ```
+    ![](https://i.imgur.com/MUPAntU.png)
+  - If the "copied" variable is **mutable**
+    - `deepcopy`: create a place and assign it with the copied value
+    - `copy`: only copy the 'shallow', and create a place point to the 'deep' part of the copied varaible
+    ```python
+    import copy
+    list=[1,[2,3]]
+    list_copy=copy.copy(list)
+    list_deepcopy=copy.deepcopy(list)
+    print("Print the value and its id. They look like 3 independent varibles.")
+    print(list, id(list))
+    print(list_copy, id(list_copy))
+    print(list_deepcopy, id(list_deepcopy))
+
+    list[0]=9
+    print("Change 'shallow' part of the variable. They still look like 3 independent varibles.")
+    print(list)
+    print(list_copy)
+    print(list_deepcopy)
+
+    list[1][1]=999
+    print("Change 'deep' part of the variable. Now, the difference between copy and deepcopy comes out.")
+    print(list)
+    print(list_copy)
+    print(list_deepcopy)
+    ```
+    ![](https://i.imgur.com/G2Mpozw.png)
+  
 - Elaspse time measurement
   ```python
   from timeit import default_timer as timer
@@ -402,6 +441,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/2cqABBz.png)
 
+  
 <!-- Template
 - 
   ```python

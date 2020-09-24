@@ -14,6 +14,7 @@
     * .txt format
     
 * An example of a news ariticle:
+
 ```
 $ gsutil cat gs://spls/gsp063/bbc_dataset/entertainment/001.txt
 
@@ -33,6 +34,7 @@ The plain green Norway spruce is displayed in the gallery's foyer. Its light bul
   
 ## Prepare a service account
 * GSP shell cmd
+
 ```
 export PROJECT=<your_project_name>
 gcloud iam service-accounts create my-account --display-name my-account
@@ -49,6 +51,7 @@ First, a client is created for each service; then references are created to the 
 The Natural Language API can return more than one category for a document, but for this lab you're only storing the first category returned to keep things simple.
 
 ### python code
+
 ```python
 from google.cloud import storage, language, bigquery
 
@@ -93,16 +96,20 @@ assert errors == []
 ```
 
 ## API call
+
 ```python3 classify-text.py```
 
 ## Result
 ### check out BigQuery
+
   ``` 
     SELECT * FROM `YOUR_PROJECT_ID.news_classification_dataset.article_data` 
   ```
+  
   ![](https://i.imgur.com/hslKRdr.png)
  
 ### see which categories are most common
+
   ```
   SELECT
     category,
@@ -114,10 +121,12 @@ assert errors == []
   ORDER BY
     c DESC
   ```
+  
   ![](https://i.imgur.com/vE79Dno.png)
 
 
 ### get only the articles where the Natural language API returned a confidence score greater than 90%
+
   ```
   SELECT
     article_text,
@@ -125,4 +134,5 @@ assert errors == []
   FROM `YOUR_PROJECT.news_classification_dataset.article_data`
   WHERE cast(confidence as float64) > 0.9
   ```
+  
   ![](https://i.imgur.com/fJYeL6j.png)

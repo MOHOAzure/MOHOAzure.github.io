@@ -59,6 +59,7 @@
 * [Syntax analysis](syntax_analysis)
   * Extract tokens and sentences, identify parts of speech (PoS) and create dependency parse trees for each sentence.
   * Automatic language detection
+* [Integrate APIs Challenge](integrate_vision_translate_cloud_storage_bigquery)
   
 ### Others
  * Dataprep

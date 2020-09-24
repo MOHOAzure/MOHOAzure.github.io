@@ -45,6 +45,37 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   Therefore, even in a multi-threaded context with more than one CPU, threads are not executed concurrently.
   - Details: <https://realpython.com/python-gil/>
   
+- Thread v.s. Process
+  - Process
+    * Basic unit for OS to allocate resource and execute
+    * Processes are independent
+    * Processes run in separate memory spaces
+    * Multiprocess is good at CPU-bound since each process has its own GIL and they can be executed concurrently
+  - Thread
+    * Basic unit for CPU operation
+    * Threads are independent
+    * Threads (of the same process) run in a shared memory space
+    * Multithread is good at IO-bound. When a thread is sleeping or waiting for input, another thread can be executed
+
+- Session v.s. Cookie
+  - Cookies and Sessions are used to store information. Cookies are only stored on the client-side machine, while sessions get stored on the client as well as a server.
+  - Session
+    - A session creates a file in a temporary directory on the server where registered session variables and their values are stored. This data will be available to all pages on the site during that visit.
+    - A session ends when the user closes the browser or after leaving the site, the server will terminate the session after a predetermined period of time, commonly 30 minutes duration.
+  - Cookies
+    - Cookies are text files stored on the client computer and they are kept of use tracking purpose. Server script sends a set of cookies to the browser. For example name, age, or identification number etc. The browser stores this information on a local machine for future use.
+    - When next time browser sends any request to web server then it sends those cookies information to the server and server uses that information to identify the user.
+
+- List and explain some common `Errors`
+  - IOError: Raised when Input/Output
+  - AttributeError: Raised when an attribute reference or assignment fails. E.g., refer to a non-existing attribute of a object
+  - ImportError: Raised when the import statement has troubles trying to load a module
+  - SyntaxError: Raised when the parser encounters a syntax error
+  - IndentationError: Base class for syntax errors related to incorrect indentation. This is a subclass of SyntaxError
+  - IndexError: Raised when a sequence subscript is out of range
+  - KeyError: Raised when a mapping (dictionary) key is not found in the set of existing keys
+  - NameError: Raised when a local or global name is not found
+
 - What are \*args and \*\*kwargs in fun(\*args and \*\*kwargs)?
   - \*args:  used to pass a variable number of Non-Keyword arguments to a function.
   - \*\*kwargs: used to pass a keyworded, variable-length argument list to a function.
@@ -189,6 +220,36 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
     ```
     ![](https://i.imgur.com/G2Mpozw.png)
   
+- Interchange between python dict and json
+  ```python  
+  import json
+  dic={"name":"HA"}
+  res=json.dumps(dic)
+  print(res, type(res))
+  res=json.loads(res)
+  print(res, type(res))
+  ```
+  ![](https://i.imgur.com/7bnhVct.png)
+  
+- SQL injection
+  * If the input contains `;+SQL`, and SQL following the `;` will be executed.
+  ```python
+  input_name='person_name'
+  sql="SELECT * FROM tbl WHERE name=%s" % input_name
+  print("A normal sql:", sql)
+
+  input_name='person_name; DROP DATABASE XXX'
+  sql="SELECT * FROM tbl WHERE name=%s" % input_name
+  print("A malicious sql:", sql)
+  ```
+  ![](https://i.imgur.com/zRobcIj.png)
+  
+  * Solution: use `params`  
+  ```python
+  params=[input_name]
+  count = table.execute("SELECT * FROM tbl WHERE name=%s",params)
+  ```
+
 - Elaspse time measurement
   ```python
   from timeit import default_timer as timer
@@ -288,6 +349,21 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/HGGIPNM.png)
 
+- Give examples of `sort` and `sorted` using a list=[0,-1,3,-10,5,9]
+  * `sort` is a function belongs to list class, and it modify the list passed as a parameter.
+  * `sorted` is a function which creates a new list containing a sorted version of the list it is given.
+  ```python
+  list=[0,-1,3,-10,5,9]
+  list.sort()
+  print('with sort:', list)
+
+  list=[0,-1,3,-10,5,9]
+  res=sorted(list)
+  print('original:',list)
+  print('with sorted:', res)
+  ```
+  ![](https://i.imgur.com/clzqbjs.png)
+  
 - Given a string, remvoe duplicated character and sort the string ascendingly.
   ```python
   s="ajldjlajfdljfddd"
@@ -384,6 +460,28 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/OR34t4d.png)
   
+- Split a string by `:` or space
+  ```python  
+  str="target str:this a string"
+  res=re.split(r':| ',str)
+  print(res)
+  ```
+  ![](https://i.imgur.com/Fqaw7iO.png)
+  
+- Find Gmail accounts
+  ```python
+  emails=["Mail_A@gmail.com", "Mail_A@gmail.com.fake", "Mail_B@yahoo.com", "Mail_C@domain.mail"]
+
+  for mail in emails:
+      res=re.match("\S+@gmail.com$",mail)
+      if res:
+          print("Find a Gmail:", mail)
+      else:
+          print("Not a Gmail:", mail)
+
+  ```
+  ![](https://i.imgur.com/M9WAFJ6.png)
+  
 - Demo ```zip```
   ```python  
   list_a=[1,2]
@@ -402,7 +500,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/n2tp75u.png)
   
-- Sort a list ascendingly but without ```sort``` function
+- Sort a list ascendingly but without `sort` function
   - find out the min number, and reverse it in a new space
   ```python  
   list=[2,3,-5,14,9,0]
@@ -419,6 +517,16 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   print(new_list)
   ```
   ![](https://i.imgur.com/oF63miO.png)
+  
+- Sort a string list by string length
+  ```python
+  list=["a","xyz","bc"]
+  res=sorted(list, key=lambda x:len(x))
+  list.sort(key=len)
+  print('res:', res)
+  print('sorted list:',list)
+  ```
+  ![](https://i.imgur.com/ZTFqz2A.png)
   
 - Implement a singleton pattern
   ```python
@@ -441,6 +549,62 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   ![](https://i.imgur.com/2cqABBz.png)
 
+- Remove the space at the begining and the end of a string
+  ```python
+  str=" YEAH "
+  str.strip()
+  ```  
+  
+- Remove the space in a string
+  ```python
+  str="HA HA YEAH "
+  # Method 1
+  res=str.replace(" ","")
+  print(res)
+
+  # Method 2
+  list=str.split(" ")
+  res="".join(list)
+  print(res)
+  ```
+  ![](https://i.imgur.com/LGhNwsW.png)
+  
+  
+- Update `[i for i in range(3)]` to a generator
+  ```python
+  gen = (i for i in range(3))
+  ```
+  
+- Count frequency of a substring inside a string
+  ```python
+  str="This a very very cool demo"
+  count=str.count('very')
+  print(str+'\nCount very:', count)
+  ```
+  ![](https://i.imgur.com/qR5oT24.png)
+  
+- Read from a excel file
+  ```python
+  import pandas as pd
+  df=pd.read_excel('file.xlsx')
+  print(df)
+  ```
+  
+- Demo `search`, `findall`, and `match` in regular expression
+  ```python  
+  import re
+  s="This year is 2000. 100%!"
+  res=re.search(r'\d+',s).group()
+  print(res)
+  res=re.findall(r'\d+',s)
+  print(res)
+  res=re.match("This",s)
+  print(res)
+  print("The following raise err since the string isn't start with '100'")
+  res=re.match("100",s).group()
+  print(res)
+  ```
+  ![](https://i.imgur.com/gIWxDMU.png)
   
 <!-- Template
 - 

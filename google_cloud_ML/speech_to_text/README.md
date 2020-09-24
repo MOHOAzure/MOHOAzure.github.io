@@ -42,7 +42,7 @@ curl -s -X POST -H "Content-Type: application/json" --data-binary @request.json 
 ```
 
 
-## Multilingual
+# Multilingual
 The Speech API supports speech to text transcription in over 100 languages
 
 ## input
@@ -59,6 +59,7 @@ The Speech API supports speech to text transcription in over 100 languages
      }
    }
   ```
+  
 ## API call
 As the same as above
 

@@ -17,6 +17,7 @@ Here is my notes for technical learning and feasibility study.
 ### DevOps
 - GCP & Kubernetes
 - [Load Balancer with Terrform](/devops/loadbalancer)
+- [Site Reliability](/devops/sitereliability)
 
 ### Programming Language
 - [Python](/programming_lang/python)

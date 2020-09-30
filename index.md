@@ -18,6 +18,7 @@ Here is my notes for technical learning and feasibility study.
 - GCP & Kubernetes
 - [Load Balancer with Terrform](/devops/loadbalancer)
 - [Site Reliability](/devops/sitereliability)
+- [Continuous Delivery with Jenkins](/devops/cd/)
 
 ### Programming Language
 - [Python](/programming_lang/python)

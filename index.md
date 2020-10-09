@@ -22,3 +22,6 @@ Here is my notes for technical learning and feasibility study.
 
 ### Programming Language
 - [Python](/programming_lang/python)
+
+### Algorithm
+- [Dynamic programming](/algo/dynamic_programming)

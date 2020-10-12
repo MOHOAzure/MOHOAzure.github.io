@@ -25,3 +25,4 @@ Here is my notes for technical learning and feasibility study.
 
 ### Algorithm
 - [Dynamic programming](/algo/dynamic_programming)
+- [Merge two sorted lists](algo/merge)

@@ -1,8 +1,6 @@
-# Dynamic programming
-
-- Binomial Coefficient
-    - one-dimensional array: two-dimensional array wastes half of the space, and each 'row' is only used to store values once
-    - Since the array type is int[], overflow may occur
+# Binomial Coefficient
+- one-dimensional array: two-dimensional array wastes half of the space, and each 'row' is only used to store values once
+- Since the array type is int[], overflow may occur
 ```java
 class Playground {
     public static int bin(int n, int k){

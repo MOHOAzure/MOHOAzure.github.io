@@ -24,6 +24,7 @@ Here is my notes for technical learning and feasibility study.
 - [Python](/programming_lang/python)
 
 ### Algorithm
+- [QuickSort](algo/quicksort)
 - [Binomial Coefficient](/algo/binomialcoefficient)
 - [Merge two sorted lists](algo/merge)
 - [Climb a staircase](algo/climbstairs)

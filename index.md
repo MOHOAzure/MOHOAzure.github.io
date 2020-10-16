@@ -24,5 +24,7 @@ Here is my notes for technical learning and feasibility study.
 - [Python](/programming_lang/python)
 
 ### Algorithm
-- [Dynamic programming](/algo/dynamic_programming)
+- [Binomial Coefficient](/algo/binomialcoefficient)
 - [Merge two sorted lists](algo/merge)
+- [Climb a staircase](algo/climbstairs)
+

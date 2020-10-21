@@ -79,6 +79,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 - What are \*args and \*\*kwargs in fun(\*args and \*\*kwargs)?
   - \*args:  used to pass a variable number of Non-Keyword arguments to a function.
   - \*\*kwargs: used to pass a keyworded, variable-length argument list to a function.
+  
   ```python
   def fun(*args, **kwargs):
     for arg in args:
@@ -101,6 +102,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   - \_\_init\_\_ : initialization of a new instance after it's been created.
     \_\_init\_\_ is called with a parameter `self`, which is and instance return by \_\_new\_\_.
     \_\_init\_\_ dosen't return value, it initiate fileds of an instance.
+    
   ```python
   class Car(object):
       def __init__(self):
@@ -118,12 +120,14 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 
 - 2 ways of file handling, using with and not using it
   - Use `with`, which deals with exception & file close internally
+  
   ```python
     with open('file_path', 'w') as file:
       file.write('using with')
   ```
   
   - Not use `with`
+  
   ```python
     file = open('file_path', 'w')
     try:
@@ -136,6 +140,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 
 - Explain python `assert`
   - Test a condition in program returns `True`, otherwise the program raises an `AssertionError` 
+  
   ```python
   val=0
   assert val==0, "OK, Value is 0"
@@ -146,6 +151,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 - In regular expression, explain difference between (.\*) and (.\*?)
   - (.\*) : it's greedy, matching as **much** as it can.
   - (.\*?) : it's non-greedy, matching as **little** as it can.
+  
   ```python  
   import re
   str="<a> foo </a><a> bar </a>"
@@ -159,6 +165,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 - Give examples to explain ```try except else finally```
   - ```finally``` is executed regardless of whether the statements in the try block fail or succeed
   - ```else``` is executed only if the statements in the try block don't raise an exception.
+  
   ```python  
   try:
       print("HI")
@@ -179,10 +186,12 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   finally:
       print("finished")
   ```
+  
   ![](https://i.imgur.com/LJqZEra.png)
 
 - copy v.s. deepcopy
   - If the "copied" variable is **immutable**, `copy` and `deepcopy` both act lilke `=`
+  
     ```python  
     import copy
     var="HA"
@@ -196,6 +205,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   - If the "copied" variable is **mutable**
     - `deepcopy`: create a place and assign it with the copied value
     - `copy`: only copy the 'shallow', and create a place point to the 'deep' part of the copied varaible
+    
     ```python
     import copy
     list=[1,[2,3]]
@@ -221,6 +231,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
     ![](https://i.imgur.com/G2Mpozw.png)
   
 - Interchange between python dict and json
+
   ```python  
   import json
   dic={"name":"HA"}
@@ -233,6 +244,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   
 - SQL injection
   * If the input contains `;+SQL`, and SQL following the `;` will be executed.
+  
   ```python
   input_name='person_name'
   sql="SELECT * FROM tbl WHERE name=%s" % input_name
@@ -245,12 +257,14 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/zRobcIj.png)
   
   * Solution: use `params`  
+  
   ```python
   params=[input_name]
   count = table.execute("SELECT * FROM tbl WHERE name=%s",params)
   ```
 
 - Elaspse time measurement
+
   ```python
   from timeit import default_timer as timer
   start = timer()
@@ -265,6 +279,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 ### Programming
   
 - Remove repeated values in a list
+
   ```python
   list=[11,11,12,13,15,13]
   dic=set(list)
@@ -273,6 +288,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/5Eokj2w.png)
   
 - Delete a key in a dictionary
+
   ```python
   dic={"key1":"v1", "key2":"v2"}
   del dic["key1"]  
@@ -280,6 +296,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/5Mpw94x.png)
   
 - Merge two dictionaries
+
   ```python
   dic1={"k1":"v1"}
   dic2={"k2":"v2"}
@@ -288,12 +305,14 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/KrmA3UW.png)
   
 - Sum up 1 to 100
+
   ```python
   sum(range(1,101))
   ```
   ![](https://i.imgur.com/myZWIz1.png)
   
 - Modify a global variable in a function
+
   ```python
   a=5
 
@@ -305,10 +324,9 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   fn()
   print("After", a)
   ```
-  ![](https://i.imgur.com/OMfIK0J.png)
-
 
 - Given a list of numbers, return their square numbers which are larger than a threshold (specified value).
+
   ```python
   def fn_sqr(x):
     return x**2
@@ -325,6 +343,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   
 
 - Generate random numbers: one integer and 3 decimal numbers
+
   ```python
   import random
 
@@ -337,6 +356,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/GBBWUN0.png)
 
 - Find *Person Name* in `<div class="person_nam">Person Name</div>` where class name is uncertain
+
   ```python
   import re
 
@@ -352,6 +372,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
 - Give examples of `sort` and `sorted` using a list=[0,-1,3,-10,5,9]
   * `sort` is a function belongs to list class, and it modify the list passed as a parameter.
   * `sorted` is a function which creates a new list containing a sorted version of the list it is given.
+  
   ```python
   list=[0,-1,3,-10,5,9]
   list.sort()
@@ -365,6 +386,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/clzqbjs.png)
   
 - Given a string, remvoe duplicated character and sort the string ascendingly.
+
   ```python
   s="ajldjlajfdljfddd"
   s=set(s)
@@ -376,6 +398,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/kXGliav.png)
   
 - Multiply two numbers with `lambda`
+
   ```python
   sum=lambda a,b:a*b
   print(sum(9,6))
@@ -383,6 +406,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/mkYFcmK.png)
   
 - Sort a dictionary by key names
+
   ```python
   dic={"Name":"Ange","Age":27, "Country":"JP"}
   list=sorted(dic.items(), key=lambda i:i[0])
@@ -392,6 +416,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/vmNRg00.png)
   
 - Count the number of each character in a given string, `s='fjljgpmupwer|ksdf#$kl*@'`
+
   ```python
   from collections import Counter
   s='fjljgpmupwer|ksdf#$kl*@'
@@ -403,6 +428,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/mM6BN96.png)
   
 - Given a str='not 404 found 成果 666 大好', try to remove the english & number parts and then output '成果' & '大好'
+
   ```python
   import re
   str='not 404 found 成果 666 大好'
@@ -419,10 +445,11 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
           list.remove(i)
 
   print(list)
-  ```
+  ```  
   ![](https://i.imgur.com/3UYfEDY.png)
   
 - Given a list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10], try to find odd numbers with `filter` and group them in a list
+
   ```python
   list=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   newlist=filter(lambda i:i%2==1, list)
@@ -432,12 +459,15 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/q7qnJry.png)
   
 - Retrieve current timestamp
+
   ```python
   import datetime
   log_time=str(datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
   print(log_time)
   ```
+  
 - Parse [[1,2],[3,4],[5,6]] to [1,2,3,4,5,6]
+
   ```python
   list=[[1,2],[3,4],[5,6]]
   new_list = [j for i in list for j in i]
@@ -452,6 +482,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   
 - Given a string, replace its numerical numbers with a white space 
+
   ```python
   import re
   str="Wow 999 Nice"
@@ -461,6 +492,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/OR34t4d.png)
   
 - Split a string by `:` or space
+
   ```python  
   str="target str:this a string"
   res=re.split(r':| ',str)
@@ -469,6 +501,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/Fqaw7iO.png)
   
 - Find Gmail accounts
+
   ```python
   emails=["Mail_A@gmail.com", "Mail_A@gmail.com.fake", "Mail_B@yahoo.com", "Mail_C@domain.mail"]
 
@@ -483,6 +516,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/M9WAFJ6.png)
   
 - Demo ```zip```
+
   ```python  
   list_a=[1,2]
   list_b=[3,4]
@@ -502,6 +536,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   
 - Sort a list ascendingly but without `sort` function
   - find out the min number, and reverse it in a new space
+  
   ```python  
   list=[2,3,-5,14,9,0]
   new_list=[]
@@ -519,6 +554,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/oF63miO.png)
   
 - Sort a string list by string length
+
   ```python
   list=["a","xyz","bc"]
   res=sorted(list, key=lambda x:len(x))
@@ -529,6 +565,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/ZTFqz2A.png)
   
 - Implement a singleton pattern
+
   ```python
   class Singleton(object):
       __instance=None
@@ -550,12 +587,14 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/2cqABBz.png)
 
 - Remove the space at the begining and the end of a string
+
   ```python
   str=" YEAH "
   str.strip()
   ```  
   
 - Remove the space in a string
+
   ```python
   str="HA HA YEAH "
   # Method 1
@@ -571,11 +610,13 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   
   
 - Update `[i for i in range(3)]` to a generator
+
   ```python
   gen = (i for i in range(3))
   ```
   
 - Count frequency of a substring inside a string
+
   ```python
   str="This a very very cool demo"
   count=str.count('very')
@@ -584,6 +625,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ![](https://i.imgur.com/qR5oT24.png)
   
 - Read from a excel file
+
   ```python
   import pandas as pd
   df=pd.read_excel('file.xlsx')
@@ -591,6 +633,7 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   ```
   
 - Demo `search`, `findall`, and `match` in regular expression
+
   ```python  
   import re
   s="This year is 2000. 100%!"
@@ -608,11 +651,13 @@ Commonly Seen Questions, including Python [knowledge](#knowledge) & [programming
   
 <!-- Template
 - 
+
   ```python
   ```
   ![]()
   
   - Question
+  
   ```python
   ```
   ![ResultPic]()

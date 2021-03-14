@@ -2,6 +2,9 @@
 
 Here is my notes for technical learning and feasibility study.
 
+### Microsoft
+- [AI](/microsoft_cloud/)
+
 ### Google API
 - [Google Cloud Machine Learning API](/google_cloud_ML/)
 - [Google Cloud Training Badges](https://google.qwiklabs.com/public_profiles/a7e90093-c2ce-44ca-b4cc-f4590b7b1db1)

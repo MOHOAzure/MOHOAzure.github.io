@@ -23,12 +23,11 @@ Here is my notes for technical learning and feasibility study.
 - [Site Reliability](/devops/sitereliability)
 - [Continuous Delivery with Jenkins](/devops/cd/)
 
-### Programming Language
-- [Python](/programming_lang/python)
+### Programming
+- Knowledge
+  - [SOLID](/programming/SOLID)
+- Language
+  - [Python](/programming/lang/python)
 
 ### Algorithm
-- [QuickSort](algo/quicksort)
-- [Binomial Coefficient](/algo/binomialcoefficient)
-- [Merge two sorted lists](algo/merge)
-- [Climb a staircase](algo/climbstairs)
-
+- [Algorithm Practice](algo/)

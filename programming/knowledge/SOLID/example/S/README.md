@@ -19,6 +19,7 @@ This states that a class should have a single responsibility, but more than that
   ```
   
 - Analysis
+  
   This class knows about a title property and allows this title property to be retrieved by a get() method. We can also use a method in this class called formatJson() to return the page as a JSON string. This might seem like a good idea as the class is responsible for its own formatting. What happens, however, if we want to change the output of the JSON string, or to add another type of output to the class? We would need to alter the class to either add another method or change an existing method to suit. This is fine for a class as simple as this, but if it contained more properties then the formatting would be more complex to change. A better approach to this is to modify the Page class so that is only knows about the data is handles. We then create a secondary class called JsonPageFormatter that is used to format the Page objects into JSON.
 
 - SOLID code

@@ -24,7 +24,7 @@ Here is my notes for technical learning and feasibility study.
 - [Continuous Delivery with Jenkins](/devops/cd/)
 
 ### Operating System
-- [OS fundamental]()
+- [OS fundamental](/OS/)
 
 ### Programming
 - Knowledge

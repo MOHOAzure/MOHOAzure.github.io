@@ -25,7 +25,7 @@ Here is my notes for technical learning and feasibility study.
 
 ### Programming
 - Knowledge
-  - [SOLID](/programming/SOLID)
+  - [SOLID](/programming/knowledge/SOLID)
 - Language
   - [Python](/programming/lang/python)
 

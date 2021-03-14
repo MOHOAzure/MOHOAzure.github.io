@@ -23,6 +23,9 @@ Here is my notes for technical learning and feasibility study.
 - [Site Reliability](/devops/sitereliability)
 - [Continuous Delivery with Jenkins](/devops/cd/)
 
+### Operating System
+- [OS fundamental]()
+
 ### Programming
 - Knowledge
   - [SOLID](/programming/knowledge/SOLID)
